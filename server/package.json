@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "make-seed": "npx knex seed:make dev --knexfile ./db/knexfile.js",
+    "migrate": "npx knex migrate:latest --knexfile ./db/knexfile.js",
+    "seed": "npx knex seed:run --knexfile ./db/knexfile.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^3.3.0",
+    "knex": "^2.0.0",
+    "koa": "^2.13.4",
+    "koa-body": "^5.0.0",
+    "koa-router": "^10.1.1",
+    "koa-session": "^6.2.0",
+    "koa-static": "^5.0.0",
+    "objection": "^3.0.1",
+    "pg": "^8.7.3",
+    "socket.io": "^4.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
